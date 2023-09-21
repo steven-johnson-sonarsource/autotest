@@ -1,0 +1,28 @@
+
+#include <iostream>
+
+int main() {
+    int x = 10;
+    int y = 0;
+
+    // Uninitialized variable usage
+    int z;
+    std::cout << z << std::endl;
+
+    // Divide by zero
+    int result = x / y;
+
+    // Unreachable code
+    if (x > 5) {
+        std::cout << "x is greater than 5" << std::endl;
+    } else {
+        std::cout << "x is not greater than 5" << std::endl;
+        return 0;
+    }
+
+    // Buffer overflow
+    char buffer[10];
+    buffer[15] = 'A';
+
+    return 0;
+}
